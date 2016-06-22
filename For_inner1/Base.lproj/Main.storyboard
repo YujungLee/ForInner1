@@ -3,9 +3,10 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--First-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -23,29 +24,68 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="216" y="411" width="48" height="21"/>
-                                </variation>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aCd-Jx-slY">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="TUK-Fw-ffY"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="First Scene" id="nxe-Em-m0r"/>
+                                </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="TUK-Fw-ffY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="TUK-Fw-ffY"/>
+                                    </mask>
+                                </variation>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aCd-Jx-slY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Bms-qM-dtg"/>
+                            <constraint firstItem="aIr-88-iKW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QSx-jn-rNE"/>
+                            <constraint firstItem="aCd-Jx-slY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Ros-Nk-yOt"/>
+                            <constraint firstItem="aIr-88-iKW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="elQ-1Y-NE1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aCd-Jx-slY" secondAttribute="trailing" constant="-20" id="lI5-ub-fjV"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="aIr-88-iKW"/>
+                                <exclude reference="aCd-Jx-slY"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Bms-qM-dtg"/>
+                                <exclude reference="Ros-Nk-yOt"/>
+                                <exclude reference="lI5-ub-fjV"/>
+                                <exclude reference="QSx-jn-rNE"/>
+                                <exclude reference="elQ-1Y-NE1"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="aIr-88-iKW"/>
+                                <include reference="aCd-Jx-slY"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Bms-qM-dtg"/>
+                                <include reference="Ros-Nk-yOt"/>
+                                <include reference="lI5-ub-fjV"/>
+                                <include reference="QSx-jn-rNE"/>
+                                <include reference="elQ-1Y-NE1"/>
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="tYN-Ha-QpN"/>
+                    <tabBarItem key="tabBarItem" title="First" id="tYN-Ha-QpN"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1162.5" y="311.25"/>
+            <point key="canvasLocation" x="1134" y="327"/>
         </scene>
-        <!--Item-->
+        <!--Second-->
         <scene sceneID="43Z-9i-Byg">
             <objects>
                 <viewController id="Kco-yM-f4V" sceneMemberID="viewController">
@@ -61,24 +101,63 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="191" y="105" width="73" height="21"/>
-                                </variation>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQf-c9-LTx">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Oxv-D4-wPw"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Second Scene" id="933-Sc-Pij"/>
+                                </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Oxv-D4-wPw"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Oxv-D4-wPw"/>
+                                    </mask>
+                                </variation>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fQf-c9-LTx" firstAttribute="top" secondItem="yyQ-9p-rUe" secondAttribute="topMargin" id="MAl-Ms-5mF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fQf-c9-LTx" secondAttribute="trailing" constant="-20" id="VTR-aC-twb"/>
+                            <constraint firstItem="CxK-cx-dGK" firstAttribute="centerY" secondItem="yyQ-9p-rUe" secondAttribute="centerY" id="ben-aE-Im4"/>
+                            <constraint firstItem="CxK-cx-dGK" firstAttribute="centerX" secondItem="yyQ-9p-rUe" secondAttribute="centerX" id="jju-PZ-d4w"/>
+                            <constraint firstItem="fQf-c9-LTx" firstAttribute="leading" secondItem="yyQ-9p-rUe" secondAttribute="leadingMargin" constant="-20" id="tOu-JM-7C5"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="CxK-cx-dGK"/>
+                                <exclude reference="fQf-c9-LTx"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="ben-aE-Im4"/>
+                                <exclude reference="jju-PZ-d4w"/>
+                                <exclude reference="MAl-Ms-5mF"/>
+                                <exclude reference="VTR-aC-twb"/>
+                                <exclude reference="tOu-JM-7C5"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="CxK-cx-dGK"/>
+                                <include reference="fQf-c9-LTx"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="ben-aE-Im4"/>
+                                <include reference="jju-PZ-d4w"/>
+                                <include reference="MAl-Ms-5mF"/>
+                                <include reference="VTR-aC-twb"/>
+                                <include reference="tOu-JM-7C5"/>
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="FCq-03-lEP"/>
+                    <tabBarItem key="tabBarItem" title="Second" id="FCq-03-lEP"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y45-5X-LaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
