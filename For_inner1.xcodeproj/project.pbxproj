@@ -409,6 +409,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kr.ac.sogang.mail.20131589.For-inner1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -420,6 +421,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kr.ac.sogang.mail.20131589.For-inner1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -488,6 +490,7 @@
 				8E877C471D197F0500FADEEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E877C481D197F0500FADEEA /* Build configuration list for PBXNativeTarget "For_inner1Tests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +499,7 @@
 				8E877C4A1D197F0500FADEEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E877C4B1D197F0500FADEEA /* Build configuration list for PBXNativeTarget "For_inner1UITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +508,7 @@
 				8E877C4D1D197F0500FADEEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
