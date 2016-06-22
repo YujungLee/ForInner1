@@ -182,25 +182,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="169.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="BJZ-vt-Y18">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="170" id="8oP-BH-bbT"/>
-                                                <constraint firstAttribute="width" constant="200" id="yWg-43-7hu"/>
-                                            </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="8oP-BH-bbT"/>
-                                                    <exclude reference="yWg-43-7hu"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <mask key="constraints">
-                                                    <include reference="8oP-BH-bbT"/>
-                                                    <include reference="yWg-43-7hu"/>
-                                                </mask>
-                                            </variation>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="title" text="이벤트이름이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUx-CY-nMb">
                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -225,6 +206,25 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="BJZ-vt-Y18">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="170" id="8oP-BH-bbT"/>
+                                                <constraint firstAttribute="width" constant="200" id="yWg-43-7hu"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="8oP-BH-bbT"/>
+                                                    <exclude reference="yWg-43-7hu"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="8oP-BH-bbT"/>
+                                                    <include reference="yWg-43-7hu"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottomMargin" secondItem="RqR-cr-y7R" secondAttribute="bottom" constant="8.5" id="2LD-tY-oQY"/>
@@ -240,11 +240,11 @@
                                     </constraints>
                                     <variation key="default">
                                         <mask key="subviews">
-                                            <exclude reference="BJZ-vt-Y18"/>
                                             <exclude reference="SUx-CY-nMb"/>
                                             <exclude reference="b8q-BZ-pe0"/>
                                             <exclude reference="jAp-LZ-NSX"/>
                                             <exclude reference="RqR-cr-y7R"/>
+                                            <exclude reference="BJZ-vt-Y18"/>
                                         </mask>
                                         <mask key="constraints">
                                             <exclude reference="FCG-gW-AzT"/>
@@ -261,11 +261,11 @@
                                     </variation>
                                     <variation key="heightClass=regular-widthClass=compact">
                                         <mask key="subviews">
-                                            <include reference="BJZ-vt-Y18"/>
                                             <include reference="SUx-CY-nMb"/>
                                             <include reference="b8q-BZ-pe0"/>
                                             <include reference="jAp-LZ-NSX"/>
                                             <include reference="RqR-cr-y7R"/>
+                                            <include reference="BJZ-vt-Y18"/>
                                         </mask>
                                         <mask key="constraints">
                                             <include reference="FCG-gW-AzT"/>
@@ -287,6 +287,7 @@
                                     <outlet property="eventLeft" destination="RqR-cr-y7R" id="Cep-g2-QMf"/>
                                     <outlet property="eventTime" destination="jAp-LZ-NSX" id="iKz-Lu-7Cs"/>
                                     <outlet property="eventTitle" destination="SUx-CY-nMb" id="l9e-rR-dGr"/>
+                                    <segue destination="4a2-2Z-sbh" kind="presentation" identifier="ShowDetail" id="rwf-pD-IHd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -301,6 +302,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cvp-qm-4Yv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2041.5" y="1011.75"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="SeT-KM-gKT">
+            <objects>
+                <viewController id="4a2-2Z-sbh" customClass="DetailViewController" customModule="For_inner1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D9t-nQ-V7p"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lhe-XG-RbQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jGI-rp-voV">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAG-KK-k29">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Back"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="125" y="284" width="139" height="44"/>
+                                </variation>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="4a2-2Z-sbh" eventType="touchUpInside" id="E5M-R0-tEo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.51811838150024414" green="0.81885141134262085" blue="0.91141706705093384" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="sAG-KK-k29"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="sAG-KK-k29"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yN4-X8-xxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2806.5" y="1011.75"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="23l-3Q-Lip">

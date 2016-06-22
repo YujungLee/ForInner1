@@ -55,6 +55,12 @@ class MainTableViewController: UITableViewController {
         return cell
     }
     
+    //아마 선택된 아이템을 다음 뷰로 날려주는..?
+    override func tableView(tableView: UITableView,
+                   didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        performSegueWithIdentifier("ShowDetail", sender: indexPath)
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -91,9 +97,10 @@ class MainTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
+    /*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
