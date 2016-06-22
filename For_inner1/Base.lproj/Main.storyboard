@@ -3,13 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--First-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="For_inner1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -59,11 +59,11 @@
                                 <exclude reference="aCd-Jx-slY"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="QSx-jn-rNE"/>
+                                <exclude reference="elQ-1Y-NE1"/>
                                 <exclude reference="Bms-qM-dtg"/>
                                 <exclude reference="Ros-Nk-yOt"/>
                                 <exclude reference="lI5-ub-fjV"/>
-                                <exclude reference="QSx-jn-rNE"/>
-                                <exclude reference="elQ-1Y-NE1"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -72,16 +72,17 @@
                                 <include reference="aCd-Jx-slY"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="QSx-jn-rNE"/>
+                                <include reference="elQ-1Y-NE1"/>
                                 <include reference="Bms-qM-dtg"/>
                                 <include reference="Ros-Nk-yOt"/>
                                 <include reference="lI5-ub-fjV"/>
-                                <include reference="QSx-jn-rNE"/>
-                                <include reference="elQ-1Y-NE1"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" id="tYN-Ha-QpN"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1134" y="327"/>
         </scene>
@@ -94,6 +95,7 @@
                         <viewControllerLayoutGuide type="bottom" id="LU6-0v-zKm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yyQ-9p-rUe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CxK-cx-dGK">
@@ -164,6 +166,60 @@
             </objects>
             <point key="canvasLocation" x="244.5" y="996.75"/>
         </scene>
+        <!--Table View-->
+        <scene sceneID="HpC-lM-xAw">
+            <objects>
+                <tableViewController id="cCW-nl-r7O" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8o9-Km-Rz4">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <navigationBar key="tableFooterView" contentMode="scaleToFill" id="rT7-OA-MOl">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Title" id="EJZ-rI-Okr"/>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="k7s-w0-TQU" detailTextLabel="Ek6-Yt-WdY" style="IBUITableViewCellStyleValue1" id="8au-fQ-KXB">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8au-fQ-KXB" id="1xB-mL-Ub7">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k7s-w0-TQU">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            </variation>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ek6-Yt-WdY">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cCW-nl-r7O" id="Mtt-ge-zSN"/>
+                            <outlet property="delegate" destination="cCW-nl-r7O" id="TYr-CG-geC"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Table View" id="4NF-zg-ldI"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cvp-qm-4Yv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1123.5" y="1011.75"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="23l-3Q-Lip">
             <objects>
@@ -176,6 +232,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="lGq-ww-U66"/>
                         <segue destination="Kco-yM-f4V" kind="relationship" relationship="viewControllers" id="cHL-AA-AVs"/>
+                        <segue destination="cCW-nl-r7O" kind="relationship" relationship="viewControllers" id="BQN-iW-myb"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YgN-61-3xL" userLabel="First Responder" sceneMemberID="firstResponder"/>
